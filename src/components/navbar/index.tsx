@@ -1,26 +1,31 @@
-"use client";
+"use client"
 
-import React from "react";
-import Link from "next/link";
-import { CalendarIcon, Code, CodeIcon, FolderOpenDot, Github, HomeIcon, Linkedin, LinkedinIcon, MailIcon, PencilIcon } from "lucide-react";
+import React from "react"
+import Link from "next/link"
+import { FolderOpenDot, HomeIcon } from "lucide-react"
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Dock, DockIcon } from "@/components/ui/dock";
-import { CodeSandboxLogoIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+} from "@/components/ui/tooltip"
+import { Dock, DockIcon } from "@/components/ui/dock"
+import ModeToggle from "@/components/ui/mode-toggle"
 
 const DATA = {
-  navbar: [
-    { href: "#", icon: HomeIcon, label: "Inicio" },
-    { href: "#", icon: FolderOpenDot, label: "Projetos" },
-  ],
+  navbar: [{ href: "#", icon: HomeIcon, label: "Inicio" }],
+  about: {
+    projects: {
+      name: "Projetos",
+      url: "#",
+      icon: FolderOpenDot,
+    }
+  },
   contact: {
     social: {
       GitHub: {
@@ -35,12 +40,12 @@ const DATA = {
       },
     },
   },
-};
+}
 
 export default function Navbar() {
   return (
-    <div className="pt-[3rem] pb-[6rem] relative flex h-[5rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-gray-900">
-      <div className="">
+    <div className="pt-[3rem] pb-[6rem] relative flex h-[5rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+      <div className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <TooltipProvider>
           <Dock direction="middle">
             {DATA.navbar.map((item) => (
@@ -51,19 +56,37 @@ export default function Navbar() {
                       href={item.href}
                       aria-label={item.label}
                       className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full bg-gray-900 text-white"
-                      )}
-                    >
-                      <item.icon className="size-4 text-white" />
+                        buttonVariants({ variant: "ghost", size: "icon"}))}>
+                      <item.icon className="size-4" />
                     </Link>
                   </TooltipTrigger>
-                  <TooltipContent className="bg-gray-900 text-white">
+                  <TooltipContent className="bg-popover text-popover-foreground">
                     <p>{item.label}</p>
                   </TooltipContent>
                 </Tooltip>
               </DockIcon>
             ))}
+            <Separator orientation="vertical" className="h-full py-2" />
+
+            {Object.entries(DATA.about).map(([name, about]) => (
+              <DockIcon key={name}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={about.url}
+                      aria-label={about.name}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon"}))}>
+                      <about.icon className="size-4" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent className="bg-popover text-popover-foreground">
+                    <p>{name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </DockIcon>
+            ))}
+
             {Object.entries(DATA.contact.social).map(([name, social]) => (
               <DockIcon key={name}>
                 <Tooltip>
@@ -72,23 +95,31 @@ export default function Navbar() {
                       href={social.url}
                       aria-label={social.name}
                       className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full bg-gray-900 text-white"
-                      )}
-                    >
-                      <social.icon className="size-4 text-white" />
+                        buttonVariants({ variant: "ghost", size: "icon"}))}>
+                      <social.icon className="size-4" />
                     </Link>
                   </TooltipTrigger>
-                  <TooltipContent className="bg-gray-900 text-white">
+                  <TooltipContent className="bg-popover text-popover-foreground">
                     <p>{name}</p>
                   </TooltipContent>
                 </Tooltip>
               </DockIcon>
             ))}
+            <Separator orientation="vertical" className="h-full py-2" />
+            
+            <DockIcon>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <ModeToggle />
+                </TooltipTrigger>
+                <TooltipContent className="bg-popover text-popover-foreground">
+                  <p>Theme</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
           </Dock>
         </TooltipProvider>
       </div>
     </div>
-
-  );
+  )
 }
