@@ -14,6 +14,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+
 import { Dock, DockIcon } from "@/components/ui/dock"
 import ModeToggle from "@/components/ui/mode-toggle"
 
@@ -44,7 +45,7 @@ const DATA = {
 
 export default function Navbar() {
   return (
-    <div className="pt-[3rem] pb-[6rem] relative flex h-[5rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+    <div className="pt-[3rem] pb-[6rem] flex h-[5rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg fixed">
       <div className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <TooltipProvider>
           <Dock direction="middle">
