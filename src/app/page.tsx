@@ -9,61 +9,61 @@ import Works from "@/components/works";
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      <Navbar/>
+      <div className="w-full sticky top-0 z-50">
+        <Navbar />
+      </div>
 
-      <section className="flex-col w-[65%] flex pl-[12rem] pr-[12rem] gap-[1.5rem]">
-        <div>
-          <div className="flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg bg-background px-40 pb-[20rem] pt-8 md:pb-60">
-            <Globe className="top-[7rem]"/>
-          <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
-        </div>
+
+      <section className="flex-col w-full max-w-7xl lg:px-[14rem] px-4 sm:px-6 flex gap-8 sm:gap-12 md:gap-16">
+        <div className="relative flex flex-col mt-[12rem]">
+          <div className="flex size-full max-w-lg mx-auto items-center justify-center overflow-hidden rounded-lg bg-background px-4 sm:px-8 md:px-12 pb-40 sm:pb-48 md:pb-60 pt-8">
+            <Globe className="absolute top-1/4 transform -translate-y-1/2" />
+            <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+          </div>
           
-          <div className="flex justify-center mt-[9rem] border rounded-lg text-center bg-primary/10 text-primary p-[.5rem]">
-            <h1>Seja bem vindo ao meu mundo!</h1>
+          <div className="flex justify-center">
+            <div className="w-[80%] border rounded-lg text-center bg-primary/10 text-primary p-2 sm:p-3 md:p-4 text-sm sm:text-base md:text-lg">
+              <h1>Seja bem vindo ao meu mundo!</h1>
+            </div>
           </div>
         </div>
         
-        <div className="flex gap-[1.5rem] items-center">
-          <div>
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-12 items-center">
+          <div className="w-48 sm:w-60 md:w-72">
             <Image
-            src={Me}
-            alt="Me"
-            width={250}
-            className="rounded-full"
+              src={Me}
+              alt="Me"
+              width={250}
+              height={250}
+              className="rounded-full w-full h-auto"
             />
           </div>
-          <div>
-            <h1 className="font-bold text-[2.2rem]">Olá, eu sou o João Victor 👋</h1>
-            <p>19 anos, Desenvolvedor & Designer UX/UI. Apaixonado quando
-            se trata a promover soluções inovadoras para problemas reais.</p>
+          <div className="text-center sm:text-left">
+            <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[2.2rem] tracking-tight mb-3">Olá, eu sou o João Victor! 👋</h1>
+            <p className="tracking-tight text-sm sm:text-base md:text-lg">
+              19 anos, Desenvolvedor & Designer UX/UI. Apaixonado quando
+              se trata a promover soluções inovadoras para problemas reais.
+            </p>
           </div>
         </div>
-
-        <div className="flex flex-col w-[100%] gap-4">
-
-          <div>
-            <div className="flex justify-center w-full">
-              <h1 className="flex justify-center w-[15%] bg-primary rounded p-1 text-primary-foreground mb-5">Projetos</h1>
-
-            </div>            
-          </div>
         
         <section className="w-full">
+          <div className="pb-6 sm:pb-8 pt-4 sm:pt-5 flex justify-center gap-4 flex-col items-center">
+            <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl tracking-tight text-center">Meus projetos favoritos</h1>
+            <h2 className="w-full sm:w-[90%] text-muted-foreground text-lg sm:text-xl md:text-2xl tracking-tight text-center">
+              Aqui estão alguns das minhas colaborações, projetos pessoais, desafios técnicos.
+            </h2>
+          </div>
+
           <Works />
 
-        </section>
-        {/* 
-          <div className="flex w-full justify-center mt-2">
-            <Button asChild className="w-[20%]">
-              <Link href="/works">Mais projetos</Link>
+          <div className="flex w-full justify-center sm:mt-4">
+            <Button asChild className="w-full sm:w-auto px-4 py-2 sm:px-6 sm:py-3">
+              <Link href="/works">Veja mais projetos</Link>
             </Button>
-          </div> */}
-
-
-          
-        </div>
+          </div>
+        </section>
       </section>
-      
     </main>
   );
-} 
+}
