@@ -2,7 +2,6 @@
 
 import createGlobe, { COBEOptions } from "cobe";
 import { useCallback, useEffect, useRef, useState } from "react";
-
 import { cn } from "@/lib/utils";
 
 const GLOBE_CONFIG: COBEOptions = {
@@ -96,7 +95,7 @@ export default function Globe({
   return (
     <div
       className={cn(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[300px]",
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[400px]",
         className,
       )}
     >
