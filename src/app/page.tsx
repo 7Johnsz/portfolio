@@ -76,8 +76,8 @@ export default function Home() {
 
           <Works />
 
-          <div className="flex w-full justify-center sm:mt-4">
-            <RainbowButton className="w-full sm:w-auto px-4 py-2 sm:px-6 sm:py-3">
+          <div className="p-4 m-4 flex w-full justify-center sm:mt-4">
+            <RainbowButton className="sm:w-auto px-4 py-2 sm:px-6 sm:py-3">
               <Link href="/works">Veja mais projetos</Link>
             </RainbowButton>
           </div>
@@ -112,8 +112,8 @@ export default function Home() {
         <footer>
           <div className="p-8 w-full justify-center items-center flex flex-col">
             <hr  />
-            <h1 className="font-bold tracking-tight text-center">Desenvolvido por João Victor</h1>
-            <p className="w-full sm:w-[60%] text-muted-foreground tracking-tight text-center">© 2024. Todos os direitos reservados.</p>
+            <h1 className="font-bold tracking-tight text-muted-foreground/50 text-center">Desenvolvido por João Victor</h1>
+            <p className="w-full sm:w-[60%] text-muted-foreground/60 tracking-tight text-center">© 2024. Todos os direitos reservados.</p>
           </div>
         </footer>
       </section>
