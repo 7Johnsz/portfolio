@@ -1,0 +1,13 @@
+diff --git a/node_modules/cobe/dist/index.d.ts b/node_modules/cobe/dist/index.d.ts
+index a4062ea..e6a94c0 100644
+--- a/node_modules/cobe/dist/index.d.ts
++++ b/node_modules/cobe/dist/index.d.ts
+@@ -8,7 +8,7 @@ export interface Marker {
+ export interface COBEOptions {
+   width: number
+   height: number
+-  onRender: (state: Record<string, any>) => void
++  onRender: any
+   phi: number
+   theta: number
+   mapSamples: number
