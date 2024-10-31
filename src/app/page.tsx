@@ -154,8 +154,8 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <RainbowButton className="sm:w-auto px-4 py-2 sm:px-6 sm:py-3">
-              <Link href="/works">Veja mais projetos</Link>
+            <RainbowButton  className="sm:w-auto px-4 py-2 sm:px-6 sm:py-3">
+              <Link href="https://github.com/7johnsz" target="_blank">Veja mais projetos</Link>
             </RainbowButton>
           </motion.div>
         </motion.section>
