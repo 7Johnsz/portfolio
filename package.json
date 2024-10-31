@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npx patch-package",
     "start": "next start",
     "lint": "next lint",
     "bun-install": "bun install && npx patch-package"
