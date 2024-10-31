@@ -12,22 +12,30 @@ import Works from "@/components/works"
 import Me from "@/public/me.jpeg"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export default function Home() {
   const techStack = ["python", "nextjs2", "tailwindcss", "flask", "php", "html5", "css3", "figma", "git"]
+  const [isClient, setIsClient] = useState(false)
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
-    stiffness: 200,
-    damping: 20,
+    stiffness: 100,
+    damping: 30,
     restDelta: 0.001
   })
 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <main className="flex flex-col items-center">
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
-        style={{ scaleX }}
-      />
+      {isClient && (
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-[9999]"
+          style={{ scaleX }}
+        />
+      )}
       
       <div className="w-full sticky top-0 z-40">
         <Navbar />
