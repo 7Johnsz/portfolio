@@ -1,12 +1,24 @@
-"use client"
+'use client';
 
-import { GithubIcon, ExternalLink } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { GithubIcon, ExternalLink } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
+
+interface Project {
+  title: string;
+  period: string;
+  description: string;
+  media: string;
+  mediaType: "video" | "img";
+  technologies: string[];
+  website?: string;
+  github?: string;
+}
 
 export default function Component() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Uber: Food Truck",
       period: "Ago 2024 - Ago 2024",
@@ -15,7 +27,7 @@ export default function Component() {
       mediaType: "video",
       technologies: ["FastAPI", "SQLite", "Python", "PyTest", "Uvicorn"],
       website: "https://example.com/foodtruck",
-      github: "https://github.com/7Johnsz/Uber-FoodTrucks"
+      github: "https://github.com/7Johnsz/Uber-FoodTrucks",
     },
     {
       title: "PicPay Simplificado",
@@ -23,8 +35,8 @@ export default function Component() {
       description: "Participei do desafio técnico do PicPay, onde eu desenvolvi uma aplicação que simplifica o processo de pagamento, realizando como perfil sênior.",
       media: "https://github.com/7Johnsz/portfolio/raw/refs/heads/main/src/public/picpay.mp4",
       mediaType: "video",
-      technologies: ["FastAPI" ,"SQLite", "Python", "Swagger UI", "Uvicorn"],
-      github: "https://github.com/7Johnsz/PicPay-Simplificado"
+      technologies: ["FastAPI", "SQLite", "Python", "Swagger UI", "Uvicorn"],
+      github: "https://github.com/7Johnsz/PicPay-Simplificado",
     },
     {
       title: "Desenvolvedor SETI 2024",
@@ -32,7 +44,7 @@ export default function Component() {
       description: "Participei como representante da SETI 2024 como Desenvolvedor, Editor & Designer UX/UI. Workshop promovendo a tecnologia nas escolas, o site alcançou +20.000 visitas.",
       media: "https://raw.githubusercontent.com/7Johnsz/portfolio/refs/heads/main/src/public/seti.jpeg",
       mediaType: "img",
-      technologies: ["HTML", "CSS", "Javascript", "FastAPI","Figma", "Photoshop"],
+      technologies: ["HTML", "CSS", "Javascript", "FastAPI", "Figma", "Photoshop"],
       website: "https://www.linkedin.com/posts/joaovictorjohn_seti2024-tecnologia-workshop-activity-7227826482927005696-XAbL?utm_source=share&utm_medium=member_desktop",
     },
     {
@@ -41,10 +53,10 @@ export default function Component() {
       description: "Participei como representante da SETI 2024 como Desenvolvedor, Editor & Designer UX/UI. Workshop promovendo a tecnologia nas escolas, o site alcançou +20.000 visitas.",
       media: "https://github.com/7Johnsz/portfolio/raw/refs/heads/main/src/public/Fortify.mp4",
       mediaType: "video",
-      technologies: ["CustomTkinter", "Tkinter", "Python", "Threading","Pillow"],
+      technologies: ["CustomTkinter", "Tkinter", "Python", "Threading", "Pillow"],
       github: "https://github.com/7Johnsz/Fortify-Login-System",
-    }
-  ]
+    },
+  ];
 
   return (
     <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 p-2 sm:p-4">
@@ -65,7 +77,9 @@ export default function Component() {
                 playsInline
               />
             ) : (
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={project.media}
                 alt={`${project.title} preview`}
                 className="w-full h-32 sm:h-48 object-cover rounded-md"
@@ -74,7 +88,11 @@ export default function Component() {
             <p className="text-xs sm:text-sm h-16 sm:h-20 overflow-y-auto">{project.description}</p>
             <div className="flex flex-wrap gap-1 sm:gap-2">
               {project.technologies.map((tech, techIndex) => (
-                <Badge key={techIndex} variant="secondary" className="bg-secondary text-secondary-foreground text-xs px-1 py-0.5">
+                <Badge
+                  key={techIndex}
+                  variant="secondary"
+                  className="bg-secondary text-secondary-foreground text-xs px-1 py-0.5"
+                >
                   {tech}
                 </Badge>
               ))}
@@ -82,16 +100,16 @@ export default function Component() {
           </CardContent>
           <CardFooter className="flex justify-start gap-2 mt-auto">
             {project.website && (
-              <Button variant="outline" size="sm" className="text-primary border-primary/20 text-xs sm:text-sm" asChild>
-                <a href={project.website} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm" className="text-primary border-primary/20 text-xs sm:text-sm">
+                <a href={project.website} target="_blank" rel="noopener noreferrer" className="flex items-center">
                   <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   Website
                 </a>
               </Button>
             )}
             {project.github && (
-              <Button variant="outline" size="sm" className="text-primary border-primary/20 text-xs sm:text-sm" asChild>
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm" className="text-primary border-primary/20 text-xs sm:text-sm">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center">
                   <GithubIcon className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   Source
                 </a>
@@ -101,5 +119,5 @@ export default function Component() {
         </Card>
       ))}
     </div>
-  )
+  );
 }
