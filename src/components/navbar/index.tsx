@@ -1,30 +1,30 @@
-"use client";
+"use client"
 
-import React from "react";
-import Link from "next/link";
-import { FolderOpenDot, HomeIcon } from "lucide-react";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { useMotionValue } from "framer-motion"; 
+import React from "react"
+import Link from "next/link"
+import { FolderOpenDot, HomeIcon } from "lucide-react"
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
+import { useMotionValue } from "framer-motion"
 
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"
 
-import { Dock, DockIcon } from "@/components/ui/dock";
-import ModeToggle from "@/components/ui/mode-toggle";
+import { Dock, DockIcon } from "@/components/ui/dock"
+import ModeToggle from "@/components/ui/mode-toggle"
 
 const DATA = {
-  navbar: [{ href: "#", icon: HomeIcon, label: "Inicio" }],
+  navbar: [{ href: "#home", icon: HomeIcon, label: "Inicio" }],
   about: {
-    projects: {
+    Projetos: {
       name: "Projetos",
-      url: "#",
+      url: "#projects",
       icon: FolderOpenDot,
     },
   },
@@ -32,20 +32,35 @@ const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/7johnsz",
         icon: GitHubLogoIcon,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/joaovictorjohn/",
         icon: LinkedInLogoIcon,
       },
     },
   },
-};
+}
 
 export default function Navbar() {
-  const mouseX = useMotionValue(0); 
+  const mouseX = useMotionValue(0)
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    
+    // Only handle internal links that start with #
+    if (!href.startsWith("#")) return
+    
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: "smooth",
+        block: "start"
+      })
+    }
+  }
 
   return (
     <div className="pt-[3rem] pb-[6rem] flex h-[5rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg fixed">
@@ -53,12 +68,13 @@ export default function Navbar() {
         <TooltipProvider>
           <Dock direction="middle">
             {DATA.navbar.map((item) => (
-              <DockIcon key={item.label} mouseX={mouseX}> 
+              <DockIcon key={item.label} mouseX={mouseX}>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
                       href={item.href}
                       aria-label={item.label}
+                      onClick={(e) => scrollToSection(e, item.href)}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" })
                       )}
@@ -75,12 +91,13 @@ export default function Navbar() {
             <Separator orientation="vertical" className="h-full py-2" />
 
             {Object.entries(DATA.about).map(([name, about]) => (
-              <DockIcon key={name} mouseX={mouseX}> 
+              <DockIcon key={name} mouseX={mouseX}>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
                       href={about.url}
                       aria-label={about.name}
+                      onClick={(e) => scrollToSection(e, about.url)}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" })
                       )}
@@ -96,7 +113,7 @@ export default function Navbar() {
             ))}
 
             {Object.entries(DATA.contact.social).map(([name, social]) => (
-              <DockIcon key={name} mouseX={mouseX}> 
+              <DockIcon key={name} mouseX={mouseX}>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
@@ -117,7 +134,7 @@ export default function Navbar() {
             ))}
             <Separator orientation="vertical" className="h-full py-2" />
 
-            <DockIcon mouseX={mouseX}> {/* Passe o mouseX real */}
+            <DockIcon mouseX={mouseX}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <ModeToggle />
@@ -131,5 +148,5 @@ export default function Navbar() {
         </TooltipProvider>
       </div>
     </div>
-  );
+  )
 }

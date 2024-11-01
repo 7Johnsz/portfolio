@@ -32,7 +32,7 @@ export default function Home() {
         <Navbar />
       </div>
 
-      <section className="flex-col w-full max-w-7xl lg:px-[14rem] px-4 sm:px-6 flex gap-8 sm:gap-12 md:gap-16">
+      <section id="home" className="flex-col w-full max-w-7xl lg:px-[14rem] px-4 sm:px-6 flex gap-8 sm:gap-12 md:gap-16">
         <motion.div 
           className="relative flex flex-col mt-[12rem] !bg-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -128,6 +128,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
+              id="projects"
             >
               Meus projetos favoritos
             </motion.h1>
@@ -142,7 +143,9 @@ export default function Home() {
             </motion.h2>
           </div>
 
-          <Works />
+          <section>
+            <Works />
+          </section>
 
           <motion.div 
             className="p-4 m-4 flex w-full justify-center sm:mt-4"
