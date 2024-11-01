@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react"
 import { Providers } from "@/components/theme/providers"
 import "./globals.css";
 
@@ -29,7 +30,7 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} antialiased`}>
-        <Providers>{children}</Providers>
+        <Providers>{children}<Analytics /></Providers>
       </body>
     </html>
   );
