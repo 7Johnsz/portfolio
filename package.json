@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npx patch-package",
+    "build": "next build && bun patch-package",
     "start": "next start",
     "lint": "next lint",
-    "bun-install": "bun install && npx patch-package",
-    "postinstall": "npx patch-package"
+    "bun-install": "bun install && bun patch-package",
+    "postinstall": "bun patch-package"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.2",
