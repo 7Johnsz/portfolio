@@ -63,8 +63,9 @@ export default function Navbar() {
   }
 
   return (
-    <div className="pt-[3rem] pb-[6rem] flex h-[5rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg fixed">
-      <div className="">
+    <div className="pt-[3rem] pb-[6rem] flex h-[5rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg fixed z-40 top-0 left-0 right-0">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50" />
+      <div>
         <TooltipProvider>
           <Dock direction="middle">
             {DATA.navbar.map((item) => (

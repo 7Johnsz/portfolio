@@ -2,8 +2,9 @@
 
 import { VelocityScroll } from "@/components/ui/scroll-based-velocity"
 import { RainbowButton } from "@/components/ui/rainbow-button"
-import { Github, Mail, Linkedin } from "lucide-react"
 import { motion, useScroll, useSpring } from "framer-motion"
+import { Github, Mail, Linkedin } from "lucide-react"
+import { Analytics } from "@vercel/analytics/react"
 import Timeline from "@/components/experiences"
 import Globe from "@/components/ui/globe"
 import StackIcon from "tech-stack-icons"
@@ -14,6 +15,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
+  const techStack = ["python", "nextjs2", "tailwindcss", "flask", "php", "html5", "css3", "figma", "git"]
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 200,
@@ -96,20 +98,21 @@ export default function Home() {
         </motion.div>
 
         <motion.div 
-          className="justify-center items-center flex gap-6 opacity-50"
+          className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 opacity-50 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 0.5, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          {["python", "nextjs2", "tailwindcss", "flask", "php", "html5", "css3", "figma", "git"].map((tech, index) => (
+          {techStack.map((tech, index) => (
             <motion.div
               key={tech}
+              className="flex items-center justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.1 + index * 0.05 }}
               whileHover={{ scale: 1.2, opacity: 1 }}
             >
-              <StackIcon className="w-[3rem] h-[3rem]" name={tech} />
+              <StackIcon className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[3rem] lg:h-[3rem]" name={tech} />
             </motion.div>
           ))}
         </motion.div>
