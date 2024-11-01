@@ -26,7 +26,6 @@ export default function Component() {
       media: "https://github.com/7Johnsz/portfolio/raw/main/src/public/foodtruck.mp4",
       mediaType: "video",
       technologies: ["FastAPI", "SQLite", "Python", "PyTest", "Uvicorn"],
-      website: "https://example.com/foodtruck",
       github: "https://github.com/7Johnsz/Uber-FoodTrucks",
     },
     {
