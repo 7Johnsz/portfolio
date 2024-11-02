@@ -5,6 +5,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button"
 import { motion, useScroll, useSpring } from "framer-motion"
 import { Github, Mail, Linkedin } from "lucide-react"
 import Timeline from "@/components/experiences"
+import { useEffect, useState } from "react"
 import Globe from "@/components/ui/globe"
 import StackIcon from "tech-stack-icons"
 import Navbar from "@/components/navbar"
@@ -12,7 +13,6 @@ import Works from "@/components/works"
 import Me from "@/public/me.jpeg"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
 
 export default function Home() {
   const techStack = ["python", "nextjs2", "tailwindcss", "flask", "php", "html5", "css3", "figma", "git"]
@@ -99,7 +99,7 @@ export default function Home() {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               19 anos, Desenvolvedor & Designer UX/UI. Apaixonado quando
-              se trata a promover soluções inovadoras para problemas reais.
+              se trata de promover soluções inovadoras para problemas reais.
             </motion.p>
           </div>
         </motion.div>
@@ -149,7 +149,7 @@ export default function Home() {
               transition={{ duration: 0.3, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Aqui estão alguns das minhas colaborações, projetos pessoais, desafios técnicos.
+              Aqui estão algumas das minhas colaborações, projetos pessoais e desafios técnicos.
             </motion.h2>
           </div>
 
@@ -182,7 +182,7 @@ export default function Home() {
             transition={{ duration: 0.3 }}
             viewport={{ once: true }}
           >
-            Experiência Profissionais
+            Experiências Profissionais
           </motion.h1>
           <Timeline />
         </motion.section>
@@ -210,7 +210,7 @@ export default function Home() {
             transition={{ duration: 0.3, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            Sinta-se à vontade para entrar em contato ou realizar um networking!
+            Sinta-se à vontade para entrar em contato ou realizar networking!
           </motion.h2>
 
           <motion.div 
