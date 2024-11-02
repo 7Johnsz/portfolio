@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Providers } from "@/components/theme/providers"
+import localFont from "next/font/local";
+import type { Metadata } from "next";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -16,8 +16,10 @@ const geistSans = localFont({
 // });
 
 export const metadata: Metadata = {
-  title: "Devjohn",
+  title: "João Victor | Devjohn",
   description: "Seja bem-vindo(a) ao meu mundo!",
+  
+  
 };
 
 export default function RootLayout({
