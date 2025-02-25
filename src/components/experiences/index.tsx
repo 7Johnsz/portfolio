@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Timeline() {
   const events = [
     {
-      date: "Dezembro 2023 - Atualmente",
+      date: "Dezembro 2023 - Fevereiro 2025",
       title: "PPG Industrial do Brasil",
       role: "Jovem aprendiz de Marketing",
       description: "Envio de materiais de marketing, cadastro de clientes, relacionamento com representantes e vendedores PPG, focal-point do SAC de reclamações e participante do e-mail corporativo de FISPQ’s de refinish.",
