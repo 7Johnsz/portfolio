@@ -15,7 +15,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
-  const techStack = ["python", "nextjs2", "tailwindcss", "flask", "php", "html5", "css3", "figma", "git"]
+  const techStack = ["python", "postgresql", "tailwindcss", "php", "nextjs2", "css3", "docker", "streamlit", "langchain", "redis"]
   const [isClient, setIsClient] = useState(false)
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
