@@ -223,7 +223,7 @@ export default function Home() {
             {[
               { href: "https://www.linkedin.com/in/joaovictorjohn/", Icon: Linkedin },
               { href: "https://github.com/7Johnsz", Icon: Github },
-              { href: "mailto:contato@devjohn.com.br", Icon: Mail }
+              { href: "mailto:contato.joaovictor99@gmail.com", Icon: Mail }
             ].map(({ href, Icon }, index) => (
               <motion.div
                 key={href}

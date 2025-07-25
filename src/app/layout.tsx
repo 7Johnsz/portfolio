@@ -18,8 +18,6 @@ const geistSans = localFont({
 export const metadata: Metadata = {
   title: "João Victor | Devjohn",
   description: "Seja bem-vindo(a) ao meu mundo!",
-  
-  
 };
 
 export default function RootLayout({
