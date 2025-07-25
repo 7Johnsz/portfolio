@@ -98,7 +98,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              20 anos, Desenvolvedor & Designer UX/UI. Apaixonado quando
+              20 anos, desenvolvedor back-end. Apaixonado quando
               se trata de promover soluções inovadoras para problemas reais.
             </motion.p>
           </div>
