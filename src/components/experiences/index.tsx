@@ -20,7 +20,7 @@ export default function Timeline() {
       title: "Honda Brasil",
       role: "Estagiário de TI",
       description: "Atuação no desenvolvimento de produtos digitais para a área de vendas da Honda, participação de daily meetings dos squads, realização na análise de dados, auxiliar na construção de use-cases e testes.",
-      image: "https://media.licdn.com/dms/image/v2/C4D0BAQFyEddb7EkQ6g/company-logo_200_200/company-logo_200_200/0/1630555985582/honda_brasil_logo?e=1756339200&v=beta&t=f0umlDeKV9qyFr1BA0VpQrthYsOZkCvhMIALN83BZN0"
+      image: "https://raw.githubusercontent.com/7Johnsz/portfolio/refs/heads/main/src/public/honda_brasil_logo.jpeg"
     }
   ];
 
