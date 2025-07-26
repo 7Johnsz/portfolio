@@ -26,11 +26,21 @@ interface Project {
 export default function Component() {
   const projects: Project[] = [
     {
+      title: "Respire AI",
+      period: "Jun 2025 - Jun 2025",
+      description: "Uma solução criada durante o 1º Hackathon da Receita Federal – 2025, com o objetivo de reaproveitar cigarros eletrônicos apreendidos e transformá-los em tecnologia útil.",
+      media: "/respire.jpeg", // Corrigido para o caminho correto
+      mediaType: "img",
+      technologies: ["Python", "FastAPI", "LangChain", "Uvicorn", "Streamlit", "Next.js", "Tailwind CSS", "Framer Motion"],
+      github: "https://github.com/7Johnsz/Respire-AI",
+      website: "https://respire-alpha.vercel.app/"
+    },
+    {
       title: "Uber: Food Truck",
       period: "Ago 2024 - Ago 2024",
       description:
         "Uma aplicação que ajuda o usuário a localizar e a explorar Food Trucks em San Francisco, um desafio criado pela Uber.",
-      media:
+        media:
         "https://github.com/7Johnsz/portfolio/raw/main/src/public/foodtruck.mp4",
       mediaType: "video",
       technologies: ["FastAPI", "SQLite", "Python", "PyTest", "Uvicorn"],
@@ -65,23 +75,6 @@ export default function Component() {
       ],
       website:
         "https://www.linkedin.com/posts/joaovictorjohn_seti2024-tecnologia-workshop-activity-7227826482927005696-XAbL?utm_source=share&utm_medium=member_desktop",
-    },
-    {
-      title: "Fortify - Login System",
-      period: "Jul 2024 - Ago 2024",
-      description:
-        "O Fortify Login System é um sistema de login simples e funcional. A ideia principal foi criar e utilizar este material para estudar a biblioteca TKinter.",
-      media:
-        "https://github.com/7Johnsz/portfolio/raw/refs/heads/main/src/public/Fortify.mp4",
-      mediaType: "video",
-      technologies: [
-        "CustomTkinter",
-        "Tkinter",
-        "Python",
-        "Threading",
-        "Pillow",
-      ],
-      github: "https://github.com/7Johnsz/Fortify-Login-System",
     },
   ];
 
@@ -165,7 +158,7 @@ export default function Component() {
                   className="flex items-center"
                 >
                   <GithubIcon className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  Source
+                  Código fonte
                 </a>
               </Button>
             )}
@@ -175,3 +168,4 @@ export default function Component() {
     </div>
   );
 }
+
