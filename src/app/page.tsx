@@ -14,8 +14,10 @@ import Me from "@/public/me.jpeg"
 import Image from "next/image"
 import Link from "next/link"
 
+import UniMetrocampLogo from "@/public/unimetrocamp_logo.jpeg"
+
 export default function Home() {
-  const techStack = ["python", "nextjs2", "tailwindcss", "flask", "php", "html5", "css3", "figma", "git"]
+  const techStack = ["python", "postgresql", "tailwindcss", "php", "nextjs2", "css3", "docker", "streamlit", "langchain", "redis"]
   const [isClient, setIsClient] = useState(false)
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
@@ -98,7 +100,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              20 anos, Desenvolvedor & Designer UX/UI. Apaixonado quando
+              20 anos, desenvolvedor back-end, graduando em sistemas de informação na Wyden UniMetrocamp. Apaixonado quando
               se trata de promover soluções inovadoras para problemas reais.
             </motion.p>
           </div>
@@ -223,7 +225,7 @@ export default function Home() {
             {[
               { href: "https://www.linkedin.com/in/joaovictorjohn/", Icon: Linkedin },
               { href: "https://github.com/7Johnsz", Icon: Github },
-              { href: "mailto:contato@devjohn.com.br", Icon: Mail }
+              { href: "mailto:contato.joaovictor99@gmail.com", Icon: Mail }
             ].map(({ href, Icon }, index) => (
               <motion.div
                 key={href}
