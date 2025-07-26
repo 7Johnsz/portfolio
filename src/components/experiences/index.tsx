@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { title } from 'process';
 
 export default function Timeline() {
   const events = [
