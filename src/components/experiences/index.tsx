@@ -7,7 +7,7 @@ export default function Timeline() {
       title: "PPG Industrial do Brasil",
       role: "Jovem aprendiz de Marketing",
       description: "Envio de materiais de marketing, cadastro de clientes, relacionamento com representantes e vendedores PPG, focal-point do SAC de reclamações e participante do e-mail corporativo de FISPQ’s de refinish.",
-      image: "https://raw.githubusercontent.com/7Johnsz/portfolio/refs/heads/main/src/public/ppgbr_logo.jpeg"
+      image: "https://raw.githubusercontent.com/7Johnsz/portfolio/refs/heads/main/src/public/ppg_logo.png"
     },
     {
       date: "Abr 2025 - Jul 2025",

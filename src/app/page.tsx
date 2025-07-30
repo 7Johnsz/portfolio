@@ -12,11 +12,10 @@ import Me from "@/public/me.jpeg"
 import Image from "next/image"
 import Link from "next/link"
 
-import dynamic from 'next/dynamic'
 import ClientOnly from '@/components/ClientOnly'
 import HeroSection from '@/components/hero'
+import dynamic from 'next/dynamic'
 
-// const Globe = dynamic(() => import('@/components/ui/globe'), { ssr: false })
 const VelocityScroll = dynamic(() => import('@/components/ui/scroll-based-velocity').then(mod => ({ default: mod.VelocityScroll })), { ssr: false })
 
 export default function Home() {
