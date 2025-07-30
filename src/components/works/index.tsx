@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import { useEffect } from "react";
 
 interface Project {
   title: string;
@@ -29,7 +30,7 @@ export default function Component() {
       title: "Respire AI",
       period: "Jun 2025 - Jun 2025",
       description: "Uma solução criada durante o 1º Hackathon da Receita Federal – 2025, com o objetivo de reaproveitar cigarros eletrônicos apreendidos e transformá-los em tecnologia útil.",
-      media: "/respire.jpeg", // Corrigido para o caminho correto
+      media: "https://raw.githubusercontent.com/7Johnsz/portfolio/refs/heads/main/src/public/respire.jpeg", 
       mediaType: "img",
       technologies: ["Python", "FastAPI", "LangChain", "Uvicorn", "Streamlit", "Next.js", "Tailwind CSS", "Framer Motion"],
       github: "https://github.com/7Johnsz/Respire-AI",
@@ -78,8 +79,20 @@ export default function Component() {
     },
   ];
 
+  useEffect(() => {
+    // Configurar todos os vídeos para evitar problemas de AudioContext
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+      video.muted = true;
+      video.volume = 0;
+    });
+  }, []);
+
   return (
-    <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 p-2 sm:p-4">
+    <div 
+      className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 p-2 sm:p-4"
+      suppressHydrationWarning
+    >
       {projects.map((project, index) => (
         <Card
           key={index}
@@ -102,6 +115,12 @@ export default function Component() {
                 loop
                 muted
                 playsInline
+                preload="metadata"
+                onLoadedData={(e) => {
+                  // Garantir que o vídeo está mudo para evitar problemas de AudioContext
+                  const video = e.target as HTMLVideoElement;
+                  video.muted = true;
+                }}
               />
             ) : (
               <Image

@@ -1,12 +1,10 @@
 'use client'
 
-import { VelocityScroll } from "@/components/ui/scroll-based-velocity"
 import { RainbowButton } from "@/components/ui/rainbow-button"
 import { motion, useScroll, useSpring } from "framer-motion"
 import { Github, Mail, Linkedin } from "lucide-react"
 import Timeline from "@/components/experiences"
 import { useEffect, useState } from "react"
-import Globe from "@/components/ui/globe"
 import StackIcon from "tech-stack-icons"
 import Navbar from "@/components/navbar"
 import Works from "@/components/works"
@@ -14,7 +12,12 @@ import Me from "@/public/me.jpeg"
 import Image from "next/image"
 import Link from "next/link"
 
-import UniMetrocampLogo from "@/public/unimetrocamp_logo.jpeg"
+import dynamic from 'next/dynamic'
+import ClientOnly from '@/components/ClientOnly'
+import HeroSection from '@/components/hero'
+
+// const Globe = dynamic(() => import('@/components/ui/globe'), { ssr: false })
+const VelocityScroll = dynamic(() => import('@/components/ui/scroll-based-velocity').then(mod => ({ default: mod.VelocityScroll })), { ssr: false })
 
 export default function Home() {
   const techStack = ["python", "postgresql", "tailwindcss", "php", "nextjs2", "css3", "docker", "streamlit", "langchain", "redis"]
@@ -27,17 +30,32 @@ export default function Home() {
   })
 
   useEffect(() => {
-    setIsClient(true)
+    if (typeof window !== 'undefined') {
+      setIsClient(true);
+      
+      const win = window as Window & { AudioContext?: typeof AudioContext; webkitAudioContext?: typeof AudioContext };
+      const originalAudioContext = win.AudioContext || win.webkitAudioContext;
+      if (originalAudioContext) {
+        (win as Window & { AudioContext?: undefined; webkitAudioContext?: undefined }).AudioContext = undefined;
+        win.webkitAudioContext = undefined;
+      }
+    }
   }, [])
+
+  if (!isClient) {
+    return 
+  }
 
   return (
     <main className="flex flex-col items-center">
-      {isClient && (
-        <motion.div
-          className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-[9999]"
-          style={{ scaleX }}
-        />
-      )}
+      <ClientOnly>
+        {isClient && (
+          <motion.div
+            className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-[9999]"
+            style={{ scaleX }}
+          />
+        )}
+      </ClientOnly>
       
       <div className="w-full sticky top-0 z-40">
         <Navbar />
@@ -45,18 +63,16 @@ export default function Home() {
 
       <section id="home" className="flex-col w-full max-w-7xl lg:px-[14rem] px-4 sm:px-6 flex gap-8 sm:gap-12 md:gap-16">
         <motion.div 
-          className="relative flex flex-col mt-[12rem] !bg-transparent"
+          className="relative flex flex-col mt-[8rem] !bg-transparent"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="flex size-full max-w-lg mx-auto items-center justify-center overflow-hidden rounded-lgpx-4 sm:px-8 md:px-12 pb-40 sm:pb-48 md:pb-60 pt-8">
-            <div>
-              <Globe className="absolute top-1/4 transform -translate-y-1/2" />
-            </div>
+          <div className="flex size-full max-w-lg mx-auto items-center justify-center overflow-hidden rounded-lg px-4 sm:px-8 md:px-12 pt-4">
+            <HeroSection />
           </div>
           
-          <div className="mt-32 relative overflow-hidden">
+          <div className="relative overflow-hidden -mt-[2.8rem]">
             <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background z-10 pointer-events-none" />
             <VelocityScroll
               text="Seja bem-vindo ao meu mundo!"
@@ -79,6 +95,7 @@ export default function Home() {
           >
             <Image
               src={Me}
+              priority
               alt="Me"
               width={250}
               height={250}
@@ -107,7 +124,7 @@ export default function Home() {
         </motion.div>
 
         <motion.div 
-          className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 opacity-50 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto"
+          className="flex mt-6 flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 opacity-50 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 0.5, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
