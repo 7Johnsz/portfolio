@@ -140,7 +140,9 @@ function VoxelDogScene({ zoomLevel }: { zoomLevel: number }) {
 }
 
 function VoxelDogModel({ onLoad }: { onLoad: () => void }) {
-  const { scene } = useGLTF('/models/voxel_dog.glb');
+  // const { scene } = useGLTF('/models/voxel_dog.glb');
+  const { scene } = useGLTF('/models/t-rex.glb');
+
   const [modelLoaded, setModelLoaded] = useState(false);
   
   useEffect(() => {
@@ -168,7 +170,7 @@ function VoxelDogModel({ onLoad }: { onLoad: () => void }) {
     <primitive 
       object={scene.clone()} 
       position={[0, -3, 0]} 
-      scale={[1.2, 1.2, 1.2]}
+      scale={[3, 3, 3]}
       rotation={[0, 0, 0]}
       castShadow
       receiveShadow
