@@ -3,6 +3,13 @@ import Image from 'next/image';
 export default function Timeline() {
   const events = [
     {
+      date: "Ago 2025 - Atualmente",
+      title: "Honda Brasil",
+      role: "Estagiário de TI",
+      description: "Atuação no desenvolvimento de produtos digitais para a área de vendas da Honda, participação de daily meetings dos squads, realização na análise de dados, auxiliar na construção de use-cases e testes.",
+      image: "https://raw.githubusercontent.com/7Johnsz/portfolio/refs/heads/main/src/public/honda_brasil_logo.jpeg"
+    },
+    {
       date: "Dez 2023 - Fev 2025",
       title: "PPG Industrial do Brasil",
       role: "Jovem aprendiz de Marketing",
@@ -14,13 +21,6 @@ export default function Timeline() {
       role: "Estagiário de Sistemas de Informação",
       description: "Atuação no suporte a áreas específicas do negócio, lidando desde incidentes em produção reportados por usuários até projetos de melhorias estratégicas definidos pela liderança executiva. Colaboração direta com Analistas de Negócios dos Sistemas Core (Oracle R12).",
     },
-    {
-      date: "Ago 2025 - Atualmente",
-      title: "Honda Brasil",
-      role: "Estagiário de TI",
-      description: "Atuação no desenvolvimento de produtos digitais para a área de vendas da Honda, participação de daily meetings dos squads, realização na análise de dados, auxiliar na construção de use-cases e testes.",
-      image: "https://raw.githubusercontent.com/7Johnsz/portfolio/refs/heads/main/src/public/honda_brasil_logo.jpeg"
-    }
   ];
 
   return (
