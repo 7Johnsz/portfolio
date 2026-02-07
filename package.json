@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && bun patch-package",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "bun-install": "bun install && bun patch-package",
+    "bun-install": "bun install",
     "postinstall": "bun patch-package"
   },
   "dependencies": {
@@ -24,7 +24,6 @@
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cobe": "^0.6.3",
     "framer-motion": "^12.23.11",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.563.0",

@@ -200,133 +200,140 @@ export default async function Home() {
         <section id="projects" className="mt-20">
           <h2 className="figtree-font text-lg font-bold mb-6">{t("projects.title")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Box className="flex flex-col gap-3 group cursor-pointer h-full">
-              <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900 border border-white/5">
-                <Image 
-                  src="/cvx.jpg" 
-                  alt="CVx" 
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-60" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-semibold text-white">CVx</h3>
-                  <div className="flex items-center gap-1 text-[10px] text-muted-light font-jetbrains-mono">
-                    <span className="flex items-center gap-0.5">
-                      {t("projects.saas")}
-                    </span>
-                  </div>
+            <Link href="http://cvxhub.com/" target="_blank" rel="noopener noreferrer">
+              <Box className="flex flex-col gap-3 group cursor-pointer h-full">
+                <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900 border border-white/5">
+                  <Image 
+                    src="/cvx.jpg" 
+                    alt="CVx" 
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-60" />
                 </div>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                  {t("projects.cvx.description")}
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Next.js</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">ARQ</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Python</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Docker</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Stripe</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Redis</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">PostgreSQL</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">FastAPI</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Pydantic</span>
-              </div>
-            </Box>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-semibold text-white">CVx</h3>
+                    <div className="flex items-center gap-1 text-[10px] text-muted-light font-jetbrains-mono">
+                      <span className="flex items-center gap-0.5">
+                        {t("projects.saas")}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    {t("projects.cvx.description")}
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Next.js</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">ARQ</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Python</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Docker</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Stripe</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Redis</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">PostgreSQL</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">FastAPI</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Pydantic</span>
+                </div>
+              </Box>
+            </Link>
 
-            <Box className="flex flex-col gap-3 group cursor-pointer h-full">
-              <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900 border border-white/5">
-                <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
-                  <span className="text-zinc-700 font-bold text-lg tracking-widest uppercase">Recall</span>
-                </div>
-                <Image src="/recall.png" alt="Recall" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-semibold text-white">Recall</h3>
-                  <div className="flex items-center gap-1 text-[10px] text-muted-light font-jetbrains-mono">
-                    <span className="flex items-center gap-0.5">
-                      {t("projects.saas")}
-                    </span>
+            <Link href="https://myrecall.dev/" target="_blank" rel="noopener noreferrer">
+              <Box className="flex flex-col gap-3 group cursor-pointer h-full">
+                <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900 border border-white/5">
+                  <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
+                    <span className="text-zinc-700 font-bold text-lg tracking-widest uppercase">Recall</span>
                   </div>
+                  <Image src="/recall.png" alt="Recall" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                  {t("projects.recall.description")}
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Python</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">SRT</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Pydantic</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">PostgreSQL</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Redis</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Docker</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">FastAPI</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">NextJS</span>
-              </div>
-            </Box>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-semibold text-white">Recall</h3>
+                    <div className="flex items-center gap-1 text-[10px] text-muted-light font-jetbrains-mono">
+                      <span className="flex items-center gap-0.5">
+                        {t("projects.saas")}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    {t("projects.recall.description")}
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Python</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">SRT</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Pydantic</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">PostgreSQL</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Redis</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Docker</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">FastAPI</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">NextJS</span>
+                </div>
+              </Box>
+            </Link>
 
-            <Box className="flex flex-col gap-3 group cursor-pointer h-full">
-              <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900 border border-white/5">
-                <Image src="/zenvya.png" alt="Zenvya" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-semibold text-white">Zenvya</h3>
-                  <div className="flex items-center gap-1 text-[10px] text-muted-light font-jetbrains-mono">
-                    <span className="flex items-center gap-0.5">
-                      {t("projects.saas")}
-                    </span>
-                  </div>
+            <Link href="http://zenvya.com.br/" target="_blank" rel="noopener noreferrer">
+              <Box className="flex flex-col gap-3 group cursor-pointer h-full">
+                <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900 border border-white/5">
+                  <Image src="/zenvya.png" alt="Zenvya" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                  {t("projects.zenvya.description")}
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">FastAPI</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Next.js</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Pydantic</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">LangChain</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">PostgreSQL</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Docker</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Redis</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Alembic</span>  
-              </div>
-            </Box>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-semibold text-white">Zenvya</h3>
+                    <div className="flex items-center gap-1 text-[10px] text-muted-light font-jetbrains-mono">
+                      <span className="flex items-center gap-0.5">
+                        {t("projects.saas")}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    {t("projects.zenvya.description")}
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">FastAPI</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Next.js</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Pydantic</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">LangChain</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">PostgreSQL</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Docker</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Redis</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Alembic</span>  
+                </div>
+              </Box>
+            </Link>
 
-            <Box className="flex flex-col gap-3 group cursor-pointer h-full">
-              <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900 border border-white/5">
-                <div className="absolute inset-0 flex items-center justify-center bg-zinc-950">
-                   <Image src="/uber.svg" alt="Uber FoodTruck" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-500/10 to-transparent opacity-50" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-semibold text-white">Uber FoodTruck</h3>
-                  <div className="flex items-center gap-1 text-[10px] text-muted-light font-jetbrains-mono">
-                    <span className="flex items-center gap-0.5">
-                      {t("projects.challenge")}
-                    </span>
+            <Link href="https://github.com/7Johnsz/Uber-FoodTrucks" target="_blank" rel="noopener noreferrer">
+              <Box className="flex flex-col gap-3 group cursor-pointer h-full">
+                <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900 border border-white/5">
+                  <div className="absolute inset-0 flex items-center justify-center bg-zinc-950">
+                     <Image src="/uber.svg" alt="Uber FoodTruck" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-500/10 to-transparent opacity-50" />
                 </div>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                  {t("projects.uberFoodtruck.description")}
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Python</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Pydantic</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Redis</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">PyTest</span>
-                <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Uvicorn</span>
-              </div>
-            </Box>
-          </div>
-        </section>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-semibold text-white">Uber FoodTruck</h3>
+                    <div className="flex items-center gap-1 text-[10px] text-muted-light font-jetbrains-mono">
+                      <span className="flex items-center gap-0.5">
+                        {t("projects.challenge")}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    {t("projects.uberFoodtruck.description")}
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Python</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Pydantic</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Redis</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">PyTest</span>
+                  <span className="px-1.5 py-0.5 rounded bg-zinc-800/50 border border-white/5 text-[9px] text-zinc-400">Uvicorn</span>
+                </div>
+              </Box>
+            </Link>
+          </div>        </section>
 
         {/* GitHub Calendar Section */}
         <section className="mt-20">
@@ -341,7 +348,6 @@ export default async function Home() {
             
             <div className="flex flex-col gap-1.5">
               <div className="flex gap-1 justify-between">
-                {/* Simulated Grid - adjusted count to fill space without scroll */}
                 {Array.from({ length: 36 }).map((_, i) => (
                   <div key={i} className="flex flex-col gap-1 shrink-0">
                     {Array.from({ length: 7 }).map((_, j) => {

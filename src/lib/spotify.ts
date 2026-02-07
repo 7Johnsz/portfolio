@@ -1,4 +1,3 @@
-
 export interface SpotifyTrack {
   isPlaying: boolean;
   title: string;
@@ -9,16 +8,14 @@ export interface SpotifyTrack {
 }
 
 export const getNowPlaying = async (): Promise<SpotifyTrack> => {
-  // Simulating an API delay
   await new Promise((resolve) => setTimeout(resolve, 500));
 
-  // Return mock data
   return {
     isPlaying: true,
-    title: "Starboy",
-    artist: "The Weeknd, Daft Punk",
-    album: "Starboy",
-    albumImageUrl: "https://i.scdn.co/image/ab67616d0000b2734718e2d7e4ba25d642b93f11",
-    songUrl: "https://open.spotify.com/track/7MXVkk9YMv3KSTEtccvCqs",
+    title: "Slayr",
+    artist: "Slayr, Holding",
+    album: "Half Blood",
+    albumImageUrl: "https://i.scdn.co/image/ab67616d00001e0255a9a5494579add8dd303e2e",
+    songUrl: "https://open.spotify.com/album/4M1Gzy271EuRkCAcW5HAFa",
   };
 };
