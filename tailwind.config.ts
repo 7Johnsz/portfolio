@@ -54,26 +54,36 @@ const config: Config = {
   			'color-2': 'hsl(var(--color-2))',
   			'color-3': 'hsl(var(--color-3))',
   			'color-4': 'hsl(var(--color-4))',
-  			'color-5': 'hsl(var(--color-5))'
+  			'color-5': 'hsl(var(--color-5))',
+        brand: 'hsl(var(--brand))',
+        cardColor: 'hsl(var(--card-color))',
+        cardColorForeground: 'hsl(var(--card-color-foreground))',
+        'muted-light': 'hsl(var(--muted-light))',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		animation: {
-  			rainbow: 'rainbow var(--speed, 2s) infinite linear'
-  		},
-  		keyframes: {
-  			rainbow: {
-  				'0%': {
-  					'background-position': '0%'
-  				},
-  				'100%': {
-  					'background-position': '200%'
-  				}
-  			}
-  		}
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "music-bar": "music-bar 1s ease-in-out infinite",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "music-bar": {
+          "0%, 100%": { height: "30%" },
+          "50%": { height: "100%" },
+        },
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],

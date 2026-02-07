@@ -1,5 +1,128 @@
 {
+  "Navigation": {
+    "home": "Início",
+    "work": "Trabalho",
+    "skills": "Skills",
+    "contact": "Contato",
+    "language": "PT"
+  },
   "HomePage": {
-    "title": "Olá Mundo!"
+    "hero": {
+      "greeting": "Opa, eu sou o",
+      "name": "JOÃO VICTOR",
+      "role": "Engenheiro de Software e Indie Hacker",
+      "description1": "Sim! Eu sou um",
+      "description2": ". Talvez você tenha visto meu trabalho no GitHub ou LinkedIn, eu me especializo em construir",
+      "fullStackApps": "Soluções Full Stack",
+      "and": "e contribuir com a comunidade",
+      "openSource": "Open Source",
+      "loveBoth": "Eu amo tanto",
+      "design": "Design",
+      "ampersand": "quanto",
+      "development": "Desenvolvimento",
+      "focusText": ". O que significa que foco em criar layouts bonitos e sistemas funcionais."
+    },
+    "experience": {
+      "itDigital": "IT Digital",
+      "internship": "Estágio",
+      "systems": "Sistemas",
+      "marketing": "Marketing",
+      "apprentice": "Aprendiz"
+    },
+    "links": {
+      "title": "Você pode conferir esses",
+      "linksWord": "links",
+      "ifYouWish": "se quiser",
+      "recentlyPlayed": "Tocando recentemente"
+    },
+    "projects": {
+      "title": "Projetos em Destaque",
+      "cvx": {
+        "description": "Transforma currículos genéricos em cirúrgicos. Analisa aderência, identifica gaps de skills e otimiza o texto com IA para vagas específicas."
+      },
+      "recall": {
+        "description": "Plataforma de repetição espaçada. Automatiza a criação de cards e agenda revisões baseadas na curva do esquecimento para idiomas."
+      },
+      "zenvya": {
+        "description": "Hub de evolução física com IA. Planos personalizados de treino e dieta que se adaptam à rotina e progresso do usuário em tempo real."
+      },
+      "uberFoodtruck": {
+        "description": "Desafio técnico backend resolvido como perfil sênior. Localiza os foodtrucks mais próximos calculando geolocalização em tempo real."
+      },
+      "saas": "SaaS",
+      "challenge": "Desafio"
+    },
+    "github": {
+      "title": "Contribuições GitHub",
+      "learnHow": "Saiba como contamos contribuições",
+      "less": "Menos",
+      "more": "Mais"
+    },
+    "footer": {
+      "copyright": "© 2026 DEVJOHN • INSPIRADO POR LEGION"
+    }
+  },
+  "SkillsPage": {
+    "backToHome": "Voltar ao Início",
+    "title": "Skills",
+    "subtitle": "Quais eu uso? Veja abaixo",
+    "techStackIntro": "Minha Tech Stack principal é",
+    "and": "e",
+    "ideText": ". Eu uso",
+    "ideEnd": "IDE para criar projetos incríveis.",
+    "categories": {
+      "core": "CORE",
+      "frameworks": "FRAMEWORKS",
+      "storage": "STORAGE",
+      "aiTools": "AI-TOOLS",
+      "devOps": "DEV-OPS",
+      "tools": "TOOLS",
+      "cloud": "CLOUD"
+    }
+  },
+  "ExperiencePage": {
+    "backToHome": "Voltar ao Início",
+    "title": "Experiência",
+    "subtitle": "Minha jornada profissional e o impacto que causei através da tecnologia e muita dedicação.",
+    "present": "Presente",
+    "hybrid": "Híbrido",
+    "onsite": "Presencial",
+    "experiences": {
+      "honda": {
+        "role": "Estágio em IT Digital & Connected Bus",
+        "period": "Ago/2024 - Presente",
+        "descriptions": [
+          "Desenvolvimento end-to-end de Deep Agent para análise de mercado automotivo, construído com frontend, backend, AWS Lambda e Bedrock, com arquitetura multi-skills e ferramentas para análise quantitativa (Pandas) e textual de pesquisas e verbatims.",
+          "Criação de pipeline de IA para documentar automaticamente +2.000 classes Apex do Salesforce, gerando documentação em Markdown via LLM e resolvendo a ausência de documentação técnica.",
+          "Criação de base de conhecimento com IA a partir de tickets de suporte de 37 serviços, processando +2 milhões de linhas de dados em 2 semanas.",
+          "Atuação técnica nos projetos SFA Automation e myHonda 2.0, plataforma responsável pela gestão completa do ciclo de vendas nas concessionárias.",
+          "Interface entre gestão, arquitetura, consultorias e squads, apoiando decisões técnicas, integrações via API Gateway (Sensedia) e acompanhamento de tickets entre áreas."
+        ]
+      },
+      "ppgSystems": {
+        "role": "Estagiário em Sistemas",
+        "period": "Jan/2024 - Ago/2024",
+        "descriptions": [
+          "Atuação no suporte a áreas específicas do negócio, lidando desde incidentes em produção reportados por usuários até projetos de melhorias estratégicas definidos pela liderança executiva.",
+          "Colaboração direta com Analistas de Negócios dos Sistemas Core (Oracle R12)."
+        ]
+      },
+      "ppgMarketing": {
+        "role": "Aprendiz em Marketing Refinish",
+        "period": "Jun/2022 - Jan/2024",
+        "descriptions": [
+          "Apoio no envio de materiais de marketing e monitoramento do controle de estoque.",
+          "Cadastro de novos clientes, contribuindo para a qualidade do atendimento ao cliente e relação com representantes da PPG, clientes e fornecedores.",
+          "Ponto focal para reclamações de produtos, visando a resolução rápida e eficaz de ocorrências.",
+          "Direcionamento das fichas de dados de segurança (FDS) relacionadas ao segmento de repintura, garantindo a conformidade com as normas aplicáveis."
+        ],
+        "skills": [
+          "Controle de estoque",
+          "Comunicação",
+          "Cadastro de clientes",
+          "Controle do SAC"
+        ]
+      }
+    }
   }
 }

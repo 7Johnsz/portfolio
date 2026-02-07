@@ -1,5 +1,128 @@
 {
+  "Navigation": {
+    "home": "Home",
+    "work": "Work",
+    "skills": "Skills",
+    "contact": "Contact",
+    "language": "EN"
+  },
   "HomePage": {
-    "title": "Hello world!"
+    "hero": {
+      "greeting": "Sup, I'm",
+      "name": "JOÃO VICTOR",
+      "role": "Software Engineer & Indie Hacker",
+      "description1": "I'm a",
+      "description2": ". Maybe you've seen my work on GitHub or LinkedIn, I specialize in building",
+      "fullStackApps": "Full Stack Solutions",
+      "and": "and contributing to the community",
+      "openSource": "Open Source",
+      "loveBoth": "I love both",
+      "design": "Design",
+      "ampersand": "&",
+      "development": "Development",
+      "focusText": ". Which means I focus on creating beautiful layouts and functional systems."
+    },
+    "experience": {
+      "itDigital": "IT Digital",
+      "internship": "Internship",
+      "systems": "Systems",
+      "marketing": "Marketing",
+      "apprentice": "Apprentice"
+    },
+    "links": {
+      "title": "You can check these",
+      "linksWord": "links",
+      "ifYouWish": "if you wish to",
+      "recentlyPlayed": "Recently played"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "cvx": {
+        "description": "Transforms generic resumes into surgical ones. Analyzes fit, identifies skill gaps, and optimizes text with AI for specific job openings."
+      },
+      "recall": {
+        "description": "Spaced repetition platform. Automates card creation and schedules reviews based on the forgetting curve for languages."
+      },
+      "zenvya": {
+        "description": "Physical evolution hub with AI. Personalized training and diet plans that adapt to the user's routine and progress in real-time."
+      },
+      "uberFoodtruck": {
+        "description": "Backend technical challenge solved as a senior profile. Locates the nearest food trucks by calculating geolocation in real-time."
+      },
+      "saas": "SaaS",
+      "challenge": "Challenge"
+    },
+    "github": {
+      "title": "GitHub Contributions",
+      "learnHow": "Learn how we count contributions",
+      "less": "Less",
+      "more": "More"
+    },
+    "footer": {
+      "copyright": "© 2026 DEVJOHN • INSPIRED BY LEGION"
+    }
+  },
+  "SkillsPage": {
+    "backToHome": "Back to Home",
+    "title": "Skills",
+    "subtitle": "Which I use? See below",
+    "techStackIntro": "My main Tech stack is",
+    "and": "and",
+    "ideText": ". I use",
+    "ideEnd": "IDE for creating awesome projects.",
+    "categories": {
+      "core": "CORE",
+      "frameworks": "FRAMEWORKS",
+      "storage": "STORAGE",
+      "aiTools": "AI-TOOLS",
+      "devOps": "DEV-OPS",
+      "tools": "TOOLS",
+      "cloud": "CLOUD"
+    }
+  },
+  "ExperiencePage": {
+    "backToHome": "Back to Home",
+    "title": "Experience",
+    "subtitle": "My professional journey and the impact I've made through technology and lots of dedication.",
+    "present": "Present",
+    "hybrid": "Hybrid",
+    "onsite": "On-site",
+    "experiences": {
+      "honda": {
+        "role": "IT Digital & Connected Bus Internship",
+        "period": "Aug/2024 - Present",
+        "descriptions": [
+          "End-to-end development of Deep Agent for automotive market analysis, built with frontend, backend, AWS Lambda and Bedrock, with multi-skills architecture and tools for quantitative (Pandas) and textual analysis of surveys and verbatims.",
+          "Created AI pipeline to automatically document +2,000 Salesforce Apex classes, generating Markdown documentation via LLM and resolving the absence of technical documentation.",
+          "Created knowledge base with AI from support tickets of 37 services, processing +2 million lines of data in 2 weeks.",
+          "Technical role in SFA Automation and myHonda 2.0 projects, platform responsible for the complete management of the sales cycle at dealerships.",
+          "Interface between management, architecture, consultancies and squads, supporting technical decisions, integrations via API Gateway (Sensedia) and ticket tracking between areas."
+        ]
+      },
+      "ppgSystems": {
+        "role": "Systems Intern",
+        "period": "Jan/2024 - Aug/2024",
+        "descriptions": [
+          "Support for specific business areas, handling everything from production incidents reported by users to strategic improvement projects defined by executive leadership.",
+          "Direct collaboration with Business Analysts of Core Systems (Oracle R12)."
+        ]
+      },
+      "ppgMarketing": {
+        "role": "Marketing Refinish Apprentice",
+        "period": "Jun/2022 - Jan/2024",
+        "descriptions": [
+          "Support in sending marketing materials and monitoring inventory control.",
+          "Registration of new customers, contributing to the quality of customer service and relationship with PPG representatives, customers and suppliers.",
+          "Focal point for product complaints, aiming for quick and effective resolution of occurrences.",
+          "Directing safety data sheets (SDS) related to the refinish segment, ensuring compliance with applicable standards."
+        ],
+        "skills": [
+          "Inventory Control",
+          "Communication",
+          "Customer Registration",
+          "SAC Control"
+        ]
+      }
+    }
   }
 }
