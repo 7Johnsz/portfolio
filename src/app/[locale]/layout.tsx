@@ -25,6 +25,18 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "João Victor",
   description: "Seja bem-vindo(a) ao meu mundo!",
+  openGraph: {
+    title: "João Victor",
+    description: "Seja bem-vindo(a) ao meu mundo!",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "João Victor - Portfolio",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
