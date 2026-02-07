@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { QueryProvider } from "@/components/query-provider";
 
 import "@/app/globals.css";
 
@@ -52,10 +53,12 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${figtree.variable} ${doto.variable} ${jetbrainsMono.variable} figtree-font antialiased dark`}>
-        <NextIntlClientProvider messages={messages}>
-          <Analytics />
-          {children}
-        </NextIntlClientProvider>
+        <QueryProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Analytics />
+            {children}
+          </NextIntlClientProvider>
+        </QueryProvider>
       </body>
     </html>
   );

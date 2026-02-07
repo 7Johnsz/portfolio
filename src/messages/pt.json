@@ -56,10 +56,11 @@
       "title": "Contribuições GitHub",
       "learnHow": "Saiba como contamos contribuições",
       "less": "Menos",
-      "more": "Mais"
+      "more": "Mais",
+      "totalCount": "{{count}} contribuições no último ano"
     },
     "footer": {
-      "copyright": "© 2026 DEVJOHN • INSPIRADO POR LEGION"
+      "copyright": "© 2026 DEVJOHN"
     }
   },
   "SkillsPage": {

@@ -56,10 +56,11 @@
       "title": "GitHub Contributions",
       "learnHow": "Learn how we count contributions",
       "less": "Less",
-      "more": "More"
+      "more": "More",
+      "totalCount": "{{count}} contributions in the last year"
     },
     "footer": {
-      "copyright": "© 2026 DEVJOHN • INSPIRED BY LEGION"
+      "copyright": "© 2026 DEVJOHN"
     }
   },
   "SkillsPage": {

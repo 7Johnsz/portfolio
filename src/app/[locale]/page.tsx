@@ -12,6 +12,7 @@ import { Navigation } from "@/components/navigation";
 import Image from "next/image";
 import { Map, MapMarker, MarkerContent } from "@/components/ui/map";
 import { SpotifyCard } from "@/components/spotify-card";
+import { GithubCalendar } from "@/components/github-calendar";
 
 const HeartHandIcon = () => (
   <svg height="1em" width="1em" className="opacity-50" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -338,49 +339,11 @@ export default async function Home() {
         {/* GitHub Calendar Section */}
         <section className="mt-20">
           <Box className="flex flex-col gap-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Github className="size-4 text-muted-light" />
-                <span className="text-sm font-medium">{t("github.title")}</span>
-              </div>
-              <span className="text-xxs text-muted-light font-jetbrains-mono">@7johnsz</span>
-            </div>
-            
-            <div className="flex flex-col gap-1.5">
-              <div className="flex gap-1 justify-between">
-                {Array.from({ length: 36 }).map((_, i) => (
-                  <div key={i} className="flex flex-col gap-1 shrink-0">
-                    {Array.from({ length: 7 }).map((_, j) => {
-                      const opacity = Math.random() > 0.6 ? (Math.random() > 0.5 ? 'bg-brand' : 'bg-brand/40') : 'bg-zinc-800/40';
-                      return (
-                        <div 
-                          key={j} 
-                          className={cn("w-[7px] h-[7px] sm:w-2 sm:h-2 rounded-[1px]", opacity)}
-                        />
-                      );
-                    })}
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center justify-between text-[10px] text-muted-light">
-                <span>{t("github.learnHow")}</span>
-                <div className="flex items-center gap-1">
-                  <span>{t("github.less")}</span>
-                  <div className="flex gap-0.5">
-                    <div className="w-2 h-2 rounded-[1px] bg-zinc-800/40" />
-                    <div className="w-2 h-2 rounded-[1px] bg-brand/20" />
-                    <div className="w-2 h-2 rounded-[1px] bg-brand/40" />
-                    <div className="w-2 h-2 rounded-[1px] bg-brand/70" />
-                    <div className="w-2 h-2 rounded-[1px] bg-brand" />
-                  </div>
-                  <span>{t("github.more")}</span>
-                </div>
-              </div>
-            </div>
+            <GithubCalendar />
           </Box>
         </section>
 
-        <section className="mt-20 pb-20">
+        <section className="mt-10 pb-40">
           <p className="text-xxs text-muted-light font-jetbrains-mono text-center opacity-50">
             {t("footer.copyright")}
           </p>
