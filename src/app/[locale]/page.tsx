@@ -84,8 +84,8 @@ export default async function Home() {
             </div>
 
             <div className="h-[300px] w-full mt-8 relative rounded-2xl overflow-hidden border border-border/40 group">
-              <Map center={[-48.3659, -21.6037]} zoom={13}>
-                <MapMarker longitude={-48.3659} latitude={-21.6037}>
+              <Map center={[-47.1642, -22.8304]} zoom={13}>
+                <MapMarker longitude={-47.1642} latitude={-22.8304}>
                   <MarkerContent>
                     <PulsingPoint />
                   </MarkerContent>
@@ -334,7 +334,8 @@ export default async function Home() {
                 </div>
               </Box>
             </Link>
-          </div>        </section>
+          </div>        
+        </section>
 
         {/* GitHub Calendar Section */}
         <section className="mt-20">

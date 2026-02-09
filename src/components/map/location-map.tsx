@@ -3,8 +3,8 @@
 import { Mapcn, MapMarker, MarkerContent } from "@/components/ui/map";
 import { MapPin } from "lucide-react";
 
-// Sumaré, SP: 22.8304° S, 47.1642° W -> [-47.1642, -22.8304] (lng, lat)
-const SUMARE: [number, number] = [-47.1642, -22.8304];
+
+const SUMARE: [number, number] = [-47.2708, -22.8244];
 
 export function LocationMap() {
   return (
